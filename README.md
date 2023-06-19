@@ -21,3 +21,6 @@ NPM é um gerenciador de pacotes para o Node.JS npm
 
 - Instalar o Angular CLI
 ```npm install -g @angular/cli```
+
+- Iniciar servidor
+```ng serve```
