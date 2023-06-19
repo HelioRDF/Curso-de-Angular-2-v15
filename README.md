@@ -2,8 +2,10 @@
 
 **Projeto criado para reproduzir o treinamento  Curso de Angular 2 (v15+) Typescript do Básico ao Avançado - UDEMY **
 
-# Link
+# Links
 https://angular.io/
+https://vidafullstack.com.br/angular-blog/
+
 
 <h4 align="left"> 
 	🚧  Angular.JS 🚀 Em andamento... 🚧
@@ -35,3 +37,9 @@ NPM é um gerenciador de pacotes para o Node.JS npm
 - Ciclos de vida Angular
 ```ngOnInit()```
 ```ngOnChanges()```
+```ngDocheck()```
+```ngAfterContentInit()```
+```ngAfterContentChecked()```
+```ngAfterViewInit()```
+```ngAfterViewChecked()```
+```ngOnDestroy```
