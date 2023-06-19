@@ -1,6 +1,10 @@
 # Curso de Angular 2 (v15+) Typescript do Básico ao Avançado - UDEMY
 
 **Projeto criado para reproduzir o treinamento  Curso de Angular 2 (v15+) Typescript do Básico ao Avançado - UDEMY **
+
+# Link
+https://angular.io/
+
 <h4 align="left"> 
 	🚧  Angular.JS 🚀 Em andamento... 🚧
 </h4>
@@ -24,3 +28,10 @@ NPM é um gerenciador de pacotes para o Node.JS npm
 
 - Iniciar servidor
 ```ng serve```
+
+- Criar componente
+```ng generate component title```
+
+- Ciclos de vida Angular
+```ngOnInit()```
+```ngOnChanges()```
