@@ -3,6 +3,7 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
 @Component({
   selector: 'app-root',
   template: `
+  <app-data-binding></app-data-binding>
   {{valor}}
   <br>
   <button (click)="adicionar()">Adicionar</button>
