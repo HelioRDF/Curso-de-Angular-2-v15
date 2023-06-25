@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class DataBindingComponent {
   public mensagem:String = "data-binding works!!!"
   public nome:String = "Franca"
+
   public ano:number = 2023
   public checkedDisabled:boolean = false
 
@@ -15,6 +16,7 @@ export class DataBindingComponent {
   alterar(evento: MouseEvent){
      this.checkedDisabled = !this.checkedDisabled 
      console.log(evento)
+     
   }
 
 }

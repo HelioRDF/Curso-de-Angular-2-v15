@@ -1,14 +1,13 @@
 # Curso de Angular 2 (v15+) Typescript do Básico ao Avançado - UDEMY
 
-**Projeto criado para reproduzir o treinamento  Curso de Angular 2 (v15+) Typescript do Básico ao Avançado - UDEMY **
+**Projeto criado para reproduzir o treinamento  Curso de Angular 2 (v15+) Typescript do Básico ao Avançado - UDEMY**
 
 # Links
-https://angular.io/
-https://vidafullstack.com.br/angular-blog/
+<https://angular.io/>
+<https://vidafullstack.com.br/angular-blog/>
 
-
-<h4 align="left"> 
-	🚧  Angular.JS 🚀 Em andamento... 🚧
+<h4 align="left">
+ 🚧  Angular.JS 🚀 Em andamento... 🚧
 </h4>
 
 ## Pré-requisitos
@@ -21,9 +20,8 @@ NPM é um gerenciador de pacotes para o Node.JS npm
 ```node -v```
 ```npm -v```
 
-
 - Instalar as dependências
-```npm install ```
+```npm install```
 
 - Instalar o Angular CLI
 ```npm install -g @angular/cli```
@@ -43,3 +41,13 @@ NPM é um gerenciador de pacotes para o Node.JS npm
 ```ngAfterViewInit()```
 ```ngAfterViewChecked()```
 ```ngOnDestroy```
+
+- Em app.modules adicionar FormsModule para reconhecer o NgModel
+
+ ```
+ imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule
+  ]
+  ```

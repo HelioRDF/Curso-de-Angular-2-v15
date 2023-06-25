@@ -1,0 +1,12 @@
+<hr>
+<h1>Diretivas estruturais</h1>
+
+<p *ngIf="valorIf; else valorElse">If True</p>
+
+<ng-template #valorElse>
+    <P>If Falso</P>
+</ng-template>
+
+<p *ngIf="novoValorIf"> Novo Valor If True</p>
+<p *ngIf="!novoValorIf"> Novo Valor If Falso</p>
+<button (click)="mudarNovoValorIf()">mudarNovoValorIf</button>

@@ -10,7 +10,9 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
   <br>
   <button (click)="destruirComponente()">Destruir Componente</button>
 <app-title *ngIf="destruir" title="Nova Msg"></app-title>
-<router-outlet></router-outlet>`
+<router-outlet>x</router-outlet>
+<app-diretivas-estruturais></app-diretivas-estruturais>
+`
 })
 export class AppComponent implements OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked {
   public valor: number = 1;
