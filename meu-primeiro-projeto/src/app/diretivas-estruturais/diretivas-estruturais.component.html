@@ -1,12 +1,20 @@
 <hr>
 <h1>Diretivas estruturais</h1>
+<h2>- If/Else</h2>
 
 <p *ngIf="valorIf; else valorElse">If True</p>
 
 <ng-template #valorElse>
-    <P>If Falso</P>
+    <p>If Falso</p>
 </ng-template>
 
 <p *ngIf="novoValorIf"> Novo Valor If True</p>
 <p *ngIf="!novoValorIf"> Novo Valor If Falso</p>
 <button (click)="mudarNovoValorIf()">mudarNovoValorIf</button>
+<h2>- For</h2>
+<ul>
+    <li *ngFor="let item of list; let i = index;"(click)="onClickEventList(i)">
+        [{{i+1}}] - Nome: {{item.nome}} - Idade: {{item.idade}}</li>
+
+</ul>
+<button  (click)="onClickAddList()">Adicionar</button>
