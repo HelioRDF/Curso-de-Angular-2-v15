@@ -17,4 +17,18 @@
         [{{i+1}}] - Nome: {{item.nome}} - Idade: {{item.idade}}</li>
 
 </ul>
+<input type="text" [(ngModel)]="nome">
+<input type="text" [(ngModel)]="idade">
 <button  (click)="onClickAddList()">Adicionar</button>
+
+<h2>Switch</h2>
+  
+
+<input type="text" [(ngModel)]="valorSwitch">
+<div [ngSwitch]="valorSwitch">
+    <p *ngSwitchCase="'Valor 01'">01-xxx</p>
+    <p *ngSwitchCase="'Valor 02'">02-xxx</p>
+    <p *ngSwitchCase="'Valor 03'">03-xxx</p>
+    <p *ngSwitchDefault>Default ----</p>
+
+</div>
