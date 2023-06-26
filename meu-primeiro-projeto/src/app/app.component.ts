@@ -12,6 +12,10 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
 <app-title *ngIf="destruir" title="Nova Msg"></app-title>
 <router-outlet>x</router-outlet>
 <app-diretivas-estruturais></app-diretivas-estruturais>
+<app-diretivas-atributos>
+<h4>Meu H4</h4>
+<h3>Meu H3</h3>
+</app-diretivas-atributos>
 `
 })
 export class AppComponent implements OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked {
