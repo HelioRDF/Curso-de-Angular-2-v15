@@ -16,6 +16,8 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
 <h4>Meu H4</h4>
 <h3>Meu H3</h3>
 </app-diretivas-atributos>
+
+<app-new-component></app-new-component>
 `
 })
 export class AppComponent implements OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked {
