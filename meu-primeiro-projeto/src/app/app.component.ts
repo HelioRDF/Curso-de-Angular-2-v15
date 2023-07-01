@@ -18,14 +18,35 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
 </app-diretivas-atributos>
 
 <app-new-component></app-new-component>
+<hr>
+<h2>Input</h2>
+<app-input [contador]="addValue"></app-input>
+<button (click)="adicionar()">Add</button>
+
+<h2>Output</h2>
+<ng-template [ngIf]="getDados">
+<h3>{{getDados.nome}}</h3>
+<h3>{{getDados.idade}}</h3>
+</ng-template>
+<app-output (enviarDados)="setDados($event)"></app-output>
+
 `
 })
 export class AppComponent implements OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked {
   public valor: number = 1;
+  public addValue: number = 0;
   public destruir: boolean = true;
 
-  public adicionar(): number {
-    return this.valor += 1;
+
+  public getDados: { nome: string, idade: number } | undefined;
+  public setDados(event: any) {
+    this.getDados = event
+
+  }
+
+  public adicionar() {
+    this.valor += 1;
+    this.addValue += 1;
   }
 
   public destruirComponente() {
