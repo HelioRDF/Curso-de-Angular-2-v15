@@ -37,6 +37,9 @@ NPM é um gerenciador de pacotes para o Node.JS npm
 - Criar componente
 ```ng generate component title```
 
+- Criar Interface
+```ng generate interface /modules/home/model/TaskList ```
+
 
 - Criar modulo (Possui um grupo de componentes)
 ```ng generate module nomepasta_shared```
