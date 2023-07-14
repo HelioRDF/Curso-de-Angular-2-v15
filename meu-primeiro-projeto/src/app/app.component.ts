@@ -29,7 +29,9 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
 <h3>{{getDados.idade}}</h3>
 </ng-template>
 <app-output (enviarDados)="setDados($event)"></app-output>
-
+<hr>
+<app-food-add></app-food-add>
+<app-food-list></app-food-list>
 `
 })
 export class AppComponent implements OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked {
