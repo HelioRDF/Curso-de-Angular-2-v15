@@ -45,6 +45,9 @@ NPM é um gerenciador de pacotes para o Node.JS npm
 ```ng generate module nomepasta_shared```
 ``` ng g m /modules/home ```
 
+- SERVIDOR FAKE - https://www.npmjs.com/package/json-server
+``` npm install -g json-server```
+
 - Ciclos de vida Angular
 ```ngOnInit()```
 ```ngOnChanges()```

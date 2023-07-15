@@ -7,12 +7,16 @@ import { FoodListService } from '../../services/food-list.service';
   styleUrls: ['./food-add.component.scss']
 })
 export class FoodAddComponent {
-  constructor(public foodListService:FoodListService){
+  constructor(public foodListService: FoodListService) {
 
   }
 
-  public listAddItem(value:string){
-    this.foodListService.foodListAdd(value)
+  public listAddItem(value: string) {
+    return this.foodListService.foodListAdd(value).subscribe({
+      next: (res: any) => this.foodListService.foodListAlert(res),
+      error: (err: any) => console.log(err)
+    }
+    );
   }
 
 }

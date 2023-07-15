@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FoodListService } from '../../services/food-list.service';
+import { FoodList } from '../../module/food-list';
 
 @Component({
   selector: 'app-food-list',
@@ -7,12 +8,47 @@ import { FoodListService } from '../../services/food-list.service';
   styleUrls: ['./food-list.component.scss']
 })
 export class FoodListComponent implements OnInit {
-  public foodList: Array<string>=[];
+  public foodList:Array<FoodList> = [];
   constructor(public foodListService: FoodListService) {
 
   }
   ngOnInit(): void {
-    this.foodList = this.foodListService.foodList()
+    this.foodListService.foodList().subscribe(
+      res => {
+        this.foodList = res
+      },
+      error => error
+    );
+    this.foodListService.emitEvent.subscribe(
+      {
+        next: (res: any) => {
+          alert(`Voce adicionou => ${res}`)
+        return this.foodList.push(res)
+        },
+        error: (err: any) => console.log(err)
+      });
+  }
+
+  public foodListDelete(id:number){
+return this.foodListService.foodListDelete(id).subscribe(
+  res=>{
+    this.foodList=this.foodList.filter(
+      item=>{
+        return id !==item.id
+      }
+    )
+  },
+  error=>error
+)
+  }
+
+  public foodListEdit(value:string, id:number){
+    this.foodListService.foodListEdit(value,id).subscribe(
+      res=>{
+return res
+      },
+      error=>error
+    )
   }
 
 }
