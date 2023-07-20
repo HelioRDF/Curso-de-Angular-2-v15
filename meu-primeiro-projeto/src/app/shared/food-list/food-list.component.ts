@@ -8,7 +8,7 @@ import { FoodList } from '../../module/food-list';
   styleUrls: ['./food-list.component.scss']
 })
 export class FoodListComponent implements OnInit {
-  public foodList:Array<FoodList> = [];
+  public foodList: Array<FoodList> = [];
   constructor(public foodListService: FoodListService) {
 
   }
@@ -23,31 +23,31 @@ export class FoodListComponent implements OnInit {
       {
         next: (res: any) => {
           alert(`Voce adicionou => ${res}`)
-        return this.foodList.push(res)
+          return this.foodList.push(res)
         },
         error: (err: any) => console.log(err)
       });
   }
 
-  public foodListDelete(id:number){
-return this.foodListService.foodListDelete(id).subscribe(
-  res=>{
-    this.foodList=this.foodList.filter(
-      item=>{
-        return id !==item.id
-      }
+  public foodListDelete(id: number) {
+    return this.foodListService.foodListDelete(id).subscribe(
+      res => {
+        this.foodList = this.foodList.filter(
+          item => {
+            return id !== item.id
+          }
+        )
+      },
+      error => error
     )
-  },
-  error=>error
-)
   }
 
-  public foodListEdit(value:string, id:number){
-    this.foodListService.foodListEdit(value,id).subscribe(
-      res=>{
-return res
+  public foodListEdit(value: string, id: number) {
+    this.foodListService.foodListEdit(value, id).subscribe(
+      res => {
+        return res
       },
-      error=>error
+      error => error
     )
   }
 

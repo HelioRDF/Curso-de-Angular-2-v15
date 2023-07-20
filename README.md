@@ -47,6 +47,7 @@ NPM é um gerenciador de pacotes para o Node.JS npm
 
 - SERVIDOR FAKE - https://www.npmjs.com/package/json-server
 ``` npm install -g json-server```
+```json-server --watch db.json```
 
 - Ciclos de vida Angular
 ```ngOnInit()```

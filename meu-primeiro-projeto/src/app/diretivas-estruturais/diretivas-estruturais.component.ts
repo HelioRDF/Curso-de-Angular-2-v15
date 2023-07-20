@@ -33,7 +33,9 @@ export class DiretivasEstruturaisComponent implements OnInit {
 
   public onClickEventList(event: number) {
     console.log(event)
-    this.list.splice(event, 1)
+   
+    
+    
   }
 
 }

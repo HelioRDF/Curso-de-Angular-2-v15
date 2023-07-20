@@ -1,0 +1,81 @@
+<h1>Fomrs </h1>
+
+<form #form="ngForm" (ngSubmit)="submitForm(form)">
+    <h2>Radio</h2>
+    <label>nome
+        <input type="text" name="nome" #nome="ngModel" [ngModel]="nome.value" required>
+    </label>
+    <span *ngIf="nome.valid && (nome.dirty && nome.touched)">
+        Trues
+    </span>
+ 
+    <br>
+    <!--valida o form-->
+    {{nome.valid}}
+    <!--Suja o form-->
+    {{nome.dirty}}
+    <!--Clica no form-->
+    {{nome.touched}}
+    <br><br>
+    <label>idade
+        <input type="text" name="idade" ngModel>
+    </label>
+    <br><br>
+    <label>
+        - Sexo
+        <br>
+        Masc: <input type="radio" name="sexo" value="Masc" ngModel>
+        <br>
+        Fem: <input type="radio" name="sexo" value="Fem" ngModel>
+        <br>
+        Outros:<input type="radio" name="sexo" value="Outros" ngModel>
+    </label>
+    <br>
+    
+    <h2>CheckBox</h2>
+    <label>
+        - Framework
+        <br>
+        Vue: <input type="checkbox" name="vue" ngModel>
+        <br>
+        React: <input type="checkbox" name="react" ngModel>
+        <br>
+        Angular:<input type="checkbox" name="angular" ngModel>
+    </label>
+    <br>
+    <br>
+    
+    <h2>Select</h2>
+    
+    <!--Lista fixa-->
+    <select name="comidas" ngModel>
+        <option value>Selecione um alimento</option>
+        <option value="X-Salada">X-Salada</option>
+        <option value="X-Bacon ">X-Bacon </option>
+        <option value="Coxinha">Coxinha</option>
+        <option value="Pizza">Pizza</option>
+    </select>
+    
+    <!--Lista dinamica sem value-->
+    <select name="comidas" ngModel>
+        <option value>Selecione um alimento</option>
+        <option *ngFor="let item of listComida">{{item.comida}}</option>
+    </select>
+    
+    <!--Lista dinamica Com value, passando STRING-->
+    <select name="comidas" ngModel>
+        <option value>Selecione um alimento</option>
+        <option *ngFor="let item of listComida" [value] ="item.comida">{{item.comida}} </option>
+    </select>
+
+    <!--Lista dinamica Com value, passando objeto-->
+    <select name="comidas" ngModel>
+        <option value>Selecione um alimento</option>
+        <option *ngFor="let item of listComida" [ngValue] ="item">{{item.comida}} </option>
+    </select>
+    <br><br>
+    <button [disabled]="nome.invalid"> Enviar</button>
+</form>
+<h3>
+    {{form.value | json}}
+</h3>

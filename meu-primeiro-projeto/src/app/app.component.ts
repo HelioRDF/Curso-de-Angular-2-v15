@@ -32,6 +32,8 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
 <hr>
 <app-food-add></app-food-add>
 <app-food-list></app-food-list>
+<hr>
+<app-fomrs>
 `
 })
 export class AppComponent implements OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked {
