@@ -3,39 +3,40 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
 @Component({
   selector: 'app-root',
   template: `
-  <app-data-binding></app-data-binding>
-  {{valor}}
+    <app-data-binding></app-data-binding>  
+    <br>
+
+    {{valor}}     
   <br>
   <button (click)="adicionar()">Adicionar</button>
   <br>
   <button (click)="destruirComponente()">Destruir Componente</button>
-<app-title *ngIf="destruir" title="Nova Msg"></app-title>
-<router-outlet>x</router-outlet>
-<app-diretivas-estruturais></app-diretivas-estruturais>
-<app-diretivas-atributos>
-<h4>Meu H4</h4>
-<h3>Meu H3</h3>
-</app-diretivas-atributos>
-<app-new-component></app-new-component>
-<hr>
-<h2>Input</h2>
-<app-input [contador]="addValue"></app-input>
-<button (click)="adicionar()">Add</button>
-
-<h2>Output</h2>
-<ng-template [ngIf]="getDados">
-<h3>{{getDados.nome}}</h3>
-<h3>{{getDados.idade}}</h3>
-</ng-template>
-<app-output (enviarDados)="setDados($event)"></app-output>
-<hr>
-<app-food-add></app-food-add>
-<app-food-list></app-food-list>
-<hr>
-<app-fomrs></app-fomrs>
+  <app-title *ngIf="destruir" title="Nova Msg"></app-title>
+  <br>
+  <app-diretivas-estruturais></app-diretivas-estruturais>
+  <br>
+  <app-diretivas-atributos></app-diretivas-atributos>
+  <br>
+  <app-new-component></app-new-component>
+  <h3>Input</h3>
+  <app-input [contador]="addValue"></app-input>
+  <button (click)="adicionar()">Add</button>
+  <h3>Output</h3>
+  <ng-template [ngIf]="getDados">
+  <h4>{{getDados.nome}}</h4>
+  <h4>{{getDados.idade}}</h4>
+  </ng-template>
+  <app-output (enviarDados)="setDados($event)"></app-output>
   <hr>
-<app-reactive-forms></app-reactive-forms>
-`
+  <br>
+  <app-food-add></app-food-add>
+  <br>
+  <app-food-list></app-food-list>
+  <br>
+  <app-fomrs></app-fomrs>
+  <br> 
+  <router-outlet></router-outlet>
+ `
 })
 export class AppComponent implements OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked {
   public valor: number = 1;

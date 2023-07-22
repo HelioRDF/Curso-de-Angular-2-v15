@@ -9,8 +9,8 @@ export class OutputComponent {
   @Output() public enviarDados=new EventEmitter();
 public list:Array<{nome:string,idade:number}>=[
   {nome:"Franca",idade:34},
-  {nome:"Luzia",idade:34},
-  {nome:"Aline",idade:34},
+  {nome:"Luzia",idade:60},
+  {nome:"Aline",idade:30},
   {nome:"Faby",idade:34},
 ]
 

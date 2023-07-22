@@ -1,9 +1,9 @@
 <html>
 
-<body>
+
     <h1>Data Binding</h1>
 
-    <h2> Interpolation</h2>
+    <h3> Interpolation</h3>
     <p>{{mensagem}}</p>
     <p>{{nome}}</p>
     <p>
@@ -14,18 +14,18 @@
             <p>
                 {{ano ==2023}} </p>
 
-            <h2> Property binding</h2>
+            <h3> Property binding</h3>
             <button [disabled]="checkedDisabled"> Button</button>
 
-            <h2> Event Biding</h2>
+            <h3> Event Biding</h3>
             <button (click)="alterar($event)"> Alterar </button>
 
-            <h2> two-way Binding</h2>
+            <h3> two-way Binding</h3>
             <input [(ngModel)]="nome">
             {{nome}}
             
       
-</body>
+
 
 <hr>
 

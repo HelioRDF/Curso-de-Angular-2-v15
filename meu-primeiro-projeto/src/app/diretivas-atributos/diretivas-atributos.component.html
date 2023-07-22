@@ -1,29 +1,29 @@
 <hr>
 <h1>Diretivas de atributos</h1>
-<h2>NgClass</h2>
+<h3>NgClass</h3>
 
 <p [ngClass]="'active'">NgClass active</p>
 <p [ngClass]="'disable'">NgClass disable</p>
 <p [ngClass]="{'active':valor, 'disable':!valor}">NgClass</p>
 
-<h2>NgStyle</h2>
+<h3>NgStyle</h3>
 <p [ngStyle]="{'background': cor}">NgStyle</p>
 
-<h2>NgModel</h2>
+<h3>NgModel</h3>
 <input type="text" [(ngModel)]="cor">
 
-<h2>NgTemplate</h2>
+<h3>NgTemplate</h3>
 
 <ng-template ngFor let-item [ngForOf]="list">
     <p>{{item.nome}}</p>
 </ng-template>
 
-<h2>NgContent</h2>
+<h3>NgContent</h3>
 
 <ng-content select = "h3"></ng-content>
 <ng-content select = "h4"></ng-content>
 
-<h2>Pipe</h2>
+<h3>Pipe</h3>
 <li *ngFor="let item of list">{{item.nome | uppercase}}</li>
 <p>{{cor | uppercase}}</p>
 <p>{{cor | lowercase}}</p>

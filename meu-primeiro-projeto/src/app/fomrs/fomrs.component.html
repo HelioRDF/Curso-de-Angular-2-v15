@@ -1,7 +1,9 @@
+
+<hr>
 <h1>Fomrs - Template-driven forms</h1>
 
 <form #form="ngForm" (ngSubmit)="submitForm(form)">
-    <h2>Radio</h2>
+    <h3>Radio</h3>
     <label>nome
         <input type="text" name="nome" #nome="ngModel" [ngModel]="nome.value" required>
     </label>
@@ -32,7 +34,7 @@
     </label>
     <br>
     
-    <h2>CheckBox</h2>
+    <h3>CheckBox</h3>
     <label>
         - Framework
         <br>
@@ -45,7 +47,7 @@
     <br>
     <br>
     
-    <h2>Select</h2>
+    <h3>Select</h3>
     
     <!--Lista fixa-->
     <select name="comidas" ngModel>
@@ -76,6 +78,6 @@
     <br><br>
     <button [disabled]="nome.invalid"> Enviar</button>
 </form>
-<h3>
+<h4>
     {{form.value | json}}
-</h3>
+</h4>
