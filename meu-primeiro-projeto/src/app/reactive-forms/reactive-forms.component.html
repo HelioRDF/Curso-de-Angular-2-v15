@@ -1,0 +1,39 @@
+<h1>Reactive-forms</h1>
+<form [formGroup]="cadastroForm" (ngSubmit)="submitForm()">
+    <label>
+        Nome:
+        <input type="text" formControlName="firstName">
+        <span
+            *ngIf="cadastroForm.get('firstName')?.errors && (cadastroForm.get('firstName')?.touched || cadastroForm.get('firstName')?.dirty)">
+            Adicionar o nome
+        </span>
+    </label>
+    <br>
+    <label>
+        Sobrenome:
+        <input type="text" formControlName="lastName" maxlength="6" minlength="4">
+        <span
+            *ngIf="cadastroForm.get('lastName')?.errors && (cadastroForm.get('lastName')?.touched || cadastroForm.get('lastName')?.dirty)">
+            Minimo
+            {{
+            cadastroForm.get('lastName')?.errors|json
+            }}
+        </span>
+    </label>
+    <br>
+    <label>
+        Email:
+        <input type="email" formControlName="email" >
+    </label>
+    <br>
+    <p>
+        {{cadastroForm.get('firstName')?.errors|json}}
+        | {{cadastroForm.get('firstName')?.touched|json}}
+        | {{cadastroForm.get('firstName')?.dirty|json}}
+        <br>
+        Lastname = {{(cadastroForm.get('lastName')?.errors| json)}}
+        <br>
+        {{cadastroForm.get('email')?.errors|json}}
+    </p>
+    <button [disabled]="cadastroForm.invalid">Enviar</button>
+</form>

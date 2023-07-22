@@ -16,7 +16,6 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
 <h4>Meu H4</h4>
 <h3>Meu H3</h3>
 </app-diretivas-atributos>
-
 <app-new-component></app-new-component>
 <hr>
 <h2>Input</h2>
@@ -33,7 +32,9 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
 <app-food-add></app-food-add>
 <app-food-list></app-food-list>
 <hr>
-<app-fomrs>
+<app-fomrs></app-fomrs>
+  <hr>
+<app-reactive-forms></app-reactive-forms>
 `
 })
 export class AppComponent implements OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked {
