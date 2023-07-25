@@ -7,6 +7,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { SobreComponent } from './pages/sobre/sobre.component';
 import { PageErrorComponent } from './pages/page-error/page-error.component';
 import { MenuComponent } from './shared/menu/menu.component';
+import { DashboardModule } from './dashboard/dashboard.module';
+
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { MenuComponent } from './shared/menu/menu.component';
     HomeComponent,
     SobreComponent,
     PageErrorComponent,
-    MenuComponent
+    MenuComponent, 
+
+
   ],
   imports: [
     BrowserModule,
