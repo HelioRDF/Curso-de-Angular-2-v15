@@ -1,0 +1,24 @@
+@import '../../../config-scss/rem-cal.scss';
+
+:host {
+    form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.9375rem 1.25rem;
+        background-color: #fff3;
+        border-radius: 0.625rem;
+
+        input {
+            width: 95%;
+            background: none;
+            border: none;
+            font-size: 1.125rem;
+            color: var(--branco);
+
+            &::placeholder {
+                color: var(--branco)
+            }
+        }
+    }
+}
